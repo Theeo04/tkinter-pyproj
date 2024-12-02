@@ -2,6 +2,7 @@ import customtkinter as ctk
 from components.navbar import Navbar
 from PIL import Image, ImageTk  # Pentru a lucra cu imaginile și a le converte în PhotoImage
 from components.add_transaction import AddTransactionWindow  # Importă fereastra de adăugare tranzacție
+from components.view_transactions import ViewTransactionsWindow
 
 class FinanceApp(ctk.CTk):
     def __init__(self):
@@ -66,7 +67,7 @@ class FinanceApp(ctk.CTk):
 
     def open_view_window(self):
         """Deschide fereastra pentru vizualizarea tranzacțiilor."""
-        print("Deschide fereastra pentru Vizualizează Tranzacții")
+        ViewTransactionsWindow(self)        
 
 if __name__ == "__main__":
     app = FinanceApp()
